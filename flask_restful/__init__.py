@@ -297,10 +297,21 @@ class Api(object):
             }
             headers = e.get_response().headers
         else:
+            """
+            Accepts Custom Exception Classes
+            """
+            code = int(e.code)
+            default_data = {
+                'title': e.title,
+                'status': False,
+                "statusText": e.description
+            }
+
+            """
             code = 500
             default_data = {
                 'message': http_status_message(code),
-            }
+            }"""
 
         # Werkzeug exceptions generate a content-length header which is added
         # to the response in addition to the actual content-length header

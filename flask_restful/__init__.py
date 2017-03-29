@@ -298,7 +298,8 @@ class Api(object):
             headers = e.get_response().headers
         else:
             """
-            Accepts Custom Exception Classes
+            # Luis edited this code to
+            Accept Custom Exception Classes
             """
             code = int(e.code)
             default_data = {

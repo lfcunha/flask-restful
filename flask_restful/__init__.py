@@ -305,7 +305,11 @@ class Api(object):
             default_data = {
                 'title': e.title,
                 'status': False,
-                "statusText": e.description
+                "statusText": e.description,
+                "result": e.description,
+                "message": e.description,
+                "description": e.description,
+                "error_code": code
             }
 
             """
